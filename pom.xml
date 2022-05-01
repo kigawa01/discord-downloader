@@ -9,8 +9,8 @@
     <version>1.0dev</version>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <build>
         <plugins>
@@ -25,7 +25,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>net.kigawa.discord.studilaybot.StudilayBot</mainClass>
+                            <mainClass>net.kigawa.discord.discorddownloader.DiscordDownloader</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -47,6 +47,11 @@
             <name>bintray</name>
             <url>https://jcenter.bintray.com</url>
         </repository>
+        <repository>
+            <id>maven_central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -63,9 +68,19 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>net.kigawa</groupId>
-            <artifactId>util</artifactId>
-            <version>3.15dev</version>
+            <groupId>net.kigawa.kutil</groupId>
+            <artifactId>kutil</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.kigawa.kutil</groupId>
+            <artifactId>log</artifactId>
+            <version>1.0dev</version>
+        </dependency>
+        <dependency>
+            <groupId>net.kigawa.kutil</groupId>
+            <artifactId>app</artifactId>
+            <version>1.3dev</version>
         </dependency>
     </dependencies>
 </project>

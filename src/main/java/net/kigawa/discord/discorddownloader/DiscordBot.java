@@ -14,14 +14,12 @@ public class DiscordBot implements Module
 {
     private static DiscordBot discordBot;
     private final String ownerId;
-    private final String token;
     private final Logger logger = DiscordDownloader.getLogger();
     private JDA jda;
 
-    public DiscordBot(String ownerId, String token)
+    public DiscordBot(String ownerId)
     {
         this.ownerId = ownerId;
-        this.token = token;
         discordBot = this;
     }
 
@@ -47,7 +45,7 @@ public class DiscordBot implements Module
                 .addCommand(new Command())
                 .build();
         try {
-            jda = JDABuilder.createDefault(this.token)
+            jda = JDABuilder.createDefault(DiscordDownloader.getTOKEN())
                     .addEventListeners(commandClient)
                     .build();
         } catch (LoginException e) {

@@ -9,8 +9,8 @@
     <version>1.0dev</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <build>
         <plugins>
@@ -63,9 +63,9 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>net.kigawa.kutil</groupId>
-            <artifactId>kutil</artifactId>
-            <version>2.0</version>
+            <groupId>net.kigawa</groupId>
+            <artifactId>util</artifactId>
+            <version>3.15dev</version>
         </dependency>
     </dependencies>
 </project>
